@@ -1,0 +1,270 @@
+/* general */
+:root{
+    --maincolor: #003a99;
+    --secondcolor: #fff;
+    --mainfont: cursive;
+}
+/* the page */
+body{
+    background: repeating-linear-gradient(0deg, var(--maincolor) -1900px, #000) no-repeat;
+    color: var(--maincolor);
+    overflow-x: hidden;
+    width: 100vw;
+}
+.header{
+    width: 100%;
+    border-bottom: var(--maincolor) solid 2px;
+    background: transparent;
+}
+.header > .container-fluid{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+
+.header > .container-fluid img.logo{
+    width: 60px;
+    height: 65px;
+}
+.header > .container-fluid ul{
+    list-style: none;
+    display: flex;
+    margin: 0;
+    justify-content: space-between;
+}
+.header>.container-fluid ul>li{
+    padding: 0 10px;
+}
+.header > .container-fluid ul > li > a{
+    color: var(--maincolor) !important;
+    text-decoration: none;
+    font-family: var(--mainfont);
+    font-weight: 800;
+    font-size: 18.5px;
+    text-transform: capitalize;
+}
+/* informtion */
+.container-fluid>.sky{
+    height: 47vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.container-fluid > .sky > .stars {
+    background: var(--secondcolor);
+    height: 160%;
+    width: 98%;
+    position: absolute;
+    animation: move 70s infinite linear;
+}
+@keyframes move{
+    0%{right: 3%;}
+    100%{right: -100%;}
+}
+.myname{
+    font-size: 80px;
+    color: var(--secondcolor);
+    letter-spacing: 13px;
+    margin-bottom: 40px;
+}
+.myname div {
+    display: inline;
+}
+.myname > .job{
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    font-family: var(--mainfont);
+    font-size: 31px;
+}
+.myname .name{
+    display: inline-block;
+    overflow-x: hidden;
+    width: fit-content;
+    margin-bottom: -28px;
+    animation: close-left 1.1s  linear;
+}
+@media (max-width: 954px) {
+    .myname div {
+        font-size: 50px;
+    }
+    .myname .name {
+        margin-bottom: -18px;
+    }
+}
+@media (max-width: 713px) {
+    .myname div {
+        font-size: 40px;
+        letter-spacing: 5px;
+    }
+}
+@media (max-width: 500px) {
+    .myname div {
+        display: flex;
+        font-size: 30px;
+        letter-spacing: 4px;
+    }
+}
+@keyframes close-left{
+    0%{
+        width: 0px;
+    }
+    90%{
+        width: 0;
+    }
+    100%{
+        width: 720px;
+    }
+}
+.myname .space{
+    animation: hide 1.2s infinite linear;
+}
+@keyframes hide{
+    0%{
+        opacity: 1;
+    }
+    25%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 65%;
+    width: 100%;
+    flex-direction: column;
+}
+.info > .title {
+    color: var(--secondcolor);
+    font-size: 24px;
+    font-family: var(--mainfont);
+}
+.info > .lang{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+}
+.info > .lang > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 165px;
+    width: 165px;
+    background-color: var(--secondcolor);
+    border-radius: 10px;
+    position: relative;
+    transition: .6s all;
+}
+.info > .lang > div:hover{
+    transform: scale(1.1);
+}
+.info > .lang > div > img{
+    height: 85px;
+    width: 85px;
+}
+.info > .lang > div > img+p{
+    color: var(--maincolor);
+    font-family: var(--mainfont);
+    position: absolute;
+    bottom: -5px;
+}
+.about #about{
+    text-align: center;
+    margin: 40px;
+}
+#about> span,#contact> span{
+    color: var(--secondcolor);
+    font-size: 21px;
+    font-family: cursive;
+    border-bottom: var(--secondcolor) solid;
+    width: fit-content;
+    padding-bottom: 10px;
+}
+.about .information{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+.about .information .cv{
+    display: flex;
+    flex-direction: row;
+    background: #fff;
+    border-radius: 20px;
+    width: fit-content;
+}
+.about .information .cv > div:nth-child(1) > img{
+    width: 348px;
+    height: 500px;
+    border-radius: 20px;
+}
+.about .information .cv > div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.about .information .cv>div:nth-child(2) > div{
+    background-color: #5f77a3;
+    padding: 10px;
+    margin: 20px;
+    text-align: center;
+    color: #000;
+    border-radius: 15px;
+}
+.about .information .cv > div:nth-child(2) > div>div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.about .information .cv>div:nth-child(2)>div>div>div{
+    padding: 25px;
+    font-weight: 600;
+}
+.about .information .cv>div:nth-child(2)>div svg{
+    font-size: 36px;
+    color: #fff;
+}
+@media (max-width:777px) {
+    .about .information .cv {
+        flex-direction: column;
+    }
+    .about .information .cv>div:nth-child(1)>img {
+        display: block;
+        margin: 0 auto;
+    }
+}
+#contact{
+    text-align: center;
+}
+.contact>.container {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    align-items: center;
+    margin: 50px auto 20px;
+}
+.contact>.container>div {
+    cursor: pointer;
+    background: #fff;
+    font-size: 30px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+}
