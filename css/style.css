@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
 /* general */
 :root{
     --maincolor: #003a99;
     --secondcolor: #fff;
-    --mainfont: cursive;
+    --mainfont: "Caveat", cursive;
 }
 /* the page */
 body{
@@ -189,7 +190,7 @@ body{
 #about> span,#contact> span{
     color: var(--secondcolor);
     font-size: 21px;
-    font-family: cursive;
+    font-family: var(--mainfont);
     border-bottom: var(--secondcolor) solid;
     width: fit-content;
     padding-bottom: 10px;
