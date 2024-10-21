@@ -257,6 +257,7 @@ body{
     height: 100px;
     align-items: center;
     margin: 50px auto 20px;
+    flex-wrap: wrap;
 }
 .contact>.container>div {
     cursor: pointer;
