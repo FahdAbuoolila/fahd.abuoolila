@@ -1,43 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
 /* general */
-:root{
+:root {
     --maincolor: #003a99;
     --secondcolor: #fff;
     --mainfont: "Caveat", cursive;
 }
+
 /* the page */
-body{
+body {
     background: repeating-linear-gradient(0deg, var(--maincolor) -1900px, #000) no-repeat;
     color: var(--maincolor);
     overflow-x: hidden;
     width: 100vw;
 }
-.header{
+
+.header {
     width: 100%;
     border-bottom: var(--maincolor) solid 2px;
     background: transparent;
 }
-.header > .container-fluid{
+
+.header>.container-fluid {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 90%;
 }
 
-.header > .container-fluid img.logo{
+.header>.container-fluid img.logo {
     width: 60px;
     height: 65px;
 }
-.header > .container-fluid ul{
+
+.header>.container-fluid ul {
     list-style: none;
     display: flex;
     margin: 0;
     justify-content: space-between;
 }
-.header>.container-fluid ul>li{
+
+.header>.container-fluid ul>li {
     padding: 0 10px;
 }
-.header > .container-fluid ul > li > a{
+
+.header>.container-fluid ul>li>a {
     color: var(--maincolor) !important;
     text-decoration: none;
     font-family: var(--mainfont);
@@ -45,60 +52,76 @@ body{
     font-size: 18.5px;
     text-transform: capitalize;
 }
+
 /* informtion */
-.container-fluid>.sky{
+.container-fluid>.sky {
     height: 47vh;
     width: 100%;
     position: relative;
     overflow: hidden;
 }
-.container-fluid > .sky > .stars {
+
+.container-fluid>.sky>.stars {
     background: var(--secondcolor);
     height: 160%;
     width: 98%;
     position: absolute;
     animation: move 70s infinite linear;
 }
-@keyframes move{
-    0%{right: 3%;}
-    100%{right: -100%;}
+
+@keyframes move {
+    0% {
+        right: 3%;
+    }
+
+    100% {
+        right: -100%;
+    }
 }
-.myname{
+
+.myname {
     font-size: 80px;
     color: var(--secondcolor);
     letter-spacing: 13px;
     margin-bottom: 40px;
 }
+
 .myname div {
     display: inline;
 }
-.myname > .job{
+
+.myname>.job {
     letter-spacing: 1px;
     text-transform: capitalize;
     font-family: var(--mainfont);
     font-size: 31px;
 }
-.myname .name{
+
+.myname .name {
     display: inline-block;
     overflow-x: hidden;
     width: fit-content;
     margin-bottom: -28px;
-    animation: close-left 1.1s  linear;
+    animation: close-left 1.1s linear;
 }
+
 @media (max-width: 954px) {
     .myname div {
         font-size: 50px;
     }
+
     .myname .name {
         margin-bottom: -18px;
     }
 }
+
 @media (max-width: 713px) {
     .myname div {
         font-size: 40px;
         letter-spacing: 5px;
     }
 }
+
 @media (max-width: 500px) {
     .myname div {
         display: flex;
@@ -106,38 +129,48 @@ body{
         letter-spacing: 4px;
     }
 }
-@keyframes close-left{
-    0%{
+
+@keyframes close-left {
+    0% {
         width: 0px;
     }
-    90%{
+
+    90% {
         width: 0;
     }
-    100%{
+
+    100% {
         width: 720px;
     }
 }
-.myname .space{
+
+.myname .space {
     animation: hide 1.2s infinite linear;
 }
-@keyframes hide{
-    0%{
+
+@keyframes hide {
+    0% {
         opacity: 1;
     }
-    25%{
+
+    25% {
         opacity: 0;
     }
-    50%{
+
+    50% {
         opacity: 1;
     }
-    75%{
+
+    75% {
         opacity: 0;
     }
-    100%{
+
+    100% {
         opacity: 1;
     }
 }
-.info{
+
+.info {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -146,12 +179,14 @@ body{
     width: 100%;
     flex-direction: column;
 }
-.info > .title {
+
+.info>.title {
     color: var(--secondcolor);
     font-size: 24px;
     font-family: var(--mainfont);
 }
-.info > .lang{
+
+.info>.lang {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -159,7 +194,8 @@ body{
     gap: 30px;
     margin-top: 30px;
 }
-.info > .lang > div{
+
+.info>.lang>div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -170,24 +206,30 @@ body{
     position: relative;
     transition: .6s all;
 }
-.info > .lang > div:hover{
+
+.info>.lang>div:hover {
     transform: scale(1.1);
 }
-.info > .lang > div > img{
+
+.info>.lang>div>img {
     height: 85px;
     width: 85px;
 }
-.info > .lang > div > img+p{
+
+.info>.lang>div>img+p {
     color: var(--maincolor);
     font-family: var(--mainfont);
     position: absolute;
     bottom: -5px;
 }
-.about #about{
+
+.about #about {
     text-align: center;
     margin: 40px;
 }
-#about> span,#contact> span{
+
+#about>span,
+#contact>span {
     color: var(--secondcolor);
     font-size: 21px;
     font-family: var(--mainfont);
@@ -195,30 +237,35 @@ body{
     width: fit-content;
     padding-bottom: 10px;
 }
-.about .information{
+
+.about .information {
     display: flex;
     align-items: center;
     justify-content: center;
     padding-bottom: 50px;
 }
-.about .information .cv{
+
+.about .information .cv {
     display: flex;
     flex-direction: row;
     background: #fff;
     border-radius: 20px;
     width: fit-content;
 }
-.about .information .cv > div:nth-child(1) > img{
+
+.about .information .cv>div:nth-child(1)>img {
     width: 348px;
     height: 500px;
     border-radius: 20px;
 }
-.about .information .cv > div:nth-child(2){
+
+.about .information .cv>div:nth-child(2) {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
 }
-.about .information .cv>div:nth-child(2) > div{
+
+.about .information .cv>div:nth-child(2)>div {
     background-color: #5f77a3;
     padding: 10px;
     margin: 20px;
@@ -226,40 +273,69 @@ body{
     color: #000;
     border-radius: 15px;
 }
-.about .information .cv > div:nth-child(2) > div>div{
+
+.about .information .cv>div:nth-child(2)>div>div {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-.about .information .cv>div:nth-child(2)>div>div>div{
+
+.about .information .cv>div:nth-child(2)>div>div>div {
     padding: 25px;
     font-weight: 600;
 }
-.about .information .cv>div:nth-child(2)>div svg{
+
+.about .information .cv>div:nth-child(2)>div svg {
     font-size: 36px;
     color: #fff;
 }
+
 @media (max-width:777px) {
     .about .information .cv {
         flex-direction: column;
     }
+
     .about .information .cv>div:nth-child(1)>img {
         display: block;
         margin: 0 auto;
     }
+    .contact>.container >div{
+        flex-wrap: wrap;
+    }
 }
-#contact{
+
+#contact {
     text-align: center;
 }
-.contact>.container {
+
+.contact>.container{
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-    height: 100px;
+    align-items: center;
+    justify-content: center;
+}
+.contact > .container >div{
+    display: flex;
+    justify-content: space-evenly;
+    min-height: 100px;
     align-items: center;
     margin: 50px auto 20px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    gap: 30px;
 }
-.contact>.container>div {
+.contact > .container .social-brand {
+    background: #5f77a3;
+    padding: 30px 0;
+    border-radius: 15px;
+    min-width: 320px;
+}
+.contact>.container>div>.social-brand>.social{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.contact > .container > div>.social-brand > .social > .brand{
     cursor: pointer;
     background: #fff;
     font-size: 30px;
@@ -269,10 +345,10 @@ body{
     align-items: center;
     justify-content: center;
     border-radius: 25px;
+    margin: 0px 0px 0px 35px;
 }
-.contact > .container .social-brand{
-    background: #5f77a3;
-    with: 200px;
-    padding: 30px;
-    border-radius: 15px;
+.contact>.container>div>.social-brand>.social>.brand+div{
+    color: #fff;
+    width: calc(320px - 85px);
+    text-align: center;
 }
