@@ -327,13 +327,13 @@ body {
     border-radius: 15px;
     min-width: 320px;
 }
-.contact>.container>div>.social-brand>.social{
+.contact>.container>div>.social-brand>a>.social{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
 }
-.contact > .container > div>.social-brand > .social > .brand{
+.contact > .container > div>.social-brand >a> .social > .brand{
     cursor: pointer;
     background: #fff;
     font-size: 30px;
@@ -345,7 +345,7 @@ body {
     border-radius: 25px;
     margin: 0px 0px 0px 35px;
 }
-.contact>.container>div>.social-brand>.social>.brand+div{
+.contact>.container>div>.social-brand>a>.social>.brand+div{
     color: #fff;
     width: calc(320px - 85px);
     text-align: center;
